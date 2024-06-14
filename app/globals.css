@@ -26,6 +26,20 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+/* Apply Tailwind's font-mono font family to all p elements */
+h1, h2, h3, p {
+  @apply font-mono;
+}
+
+h2 {
+  @apply text-2xl
+}
+
+p {
+  @apply text-sm;
+  @apply font-medium
+}
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;

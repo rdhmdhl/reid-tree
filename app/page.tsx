@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link
  from "next/link";
+import './globals.css';  
 export default function Home() {
 
   
@@ -9,6 +10,9 @@ export default function Home() {
       <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <Link href="/discrete-math">
           <p>Discrete Math</p>
+        </Link>
+        <Link href="/oop">
+          <p>Object Oriented Programming</p>
         </Link>
       </div>
     </main>
