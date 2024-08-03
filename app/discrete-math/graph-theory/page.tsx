@@ -54,17 +54,14 @@ function GraphTheory() {
         Mixed Graph:
       </p>
       <p>
-        Allows for multiple edges and loops. Think of this as a roadway system within Los Angeles. The multiple edges represent different routes between neighborhoods, and loops represent routes that start and end in the same neighborhood. Each edge signifies a different route, illustrating the complexity of travel options within the city. This type of graph is useful for modeling scenarios where multiple interactions and self-references need to be depicted clearly.
+        Allows for multiple edges and loops. Think of this as a roadway system within Los Angeles. The multiple edges represent different routes between neighborhoods, and loops represent routes that start and end in the same neighborhood. Each edge signifies a different route, illustrating the complexity of travel options within the city.
       </p>
       <MixedGraph/>
       <p className='mt-4'>
         Multi Graph:
       </p>
       <p>
-        No loops, but multiple edges are allowed. A transportation network may be a good example of this. The multiple edges between nodes represent the various flights between the same pair of cities. Each edge signifies a different flight, showcasing the complexity of travel options between these cities. This type of graph is useful for modeling scenarios where multiple relationships or interactions need to be depicted clearly.
-      </p>
-      <p>
-        add content here
+        No loops, but multiple edges are allowed. A transportation network may be a good example of this. The multiple edges between nodes represent the various flights between the same pair of cities. 
       </p>
       <MultiGraph/>
       <p className='mt-4'>
