@@ -99,6 +99,76 @@ function functions() {
         <p className="text-sm font-thin mt-4">This can be simplified further by using the matrix format, but not the same sort of matrix found in linear algebra. </p>
         <FunctionMatrix/>
       </div>
+      {/* COMMON FUNCTIONS IN COMP SCI */}
+      <h2 className="text-2xl mt-4">Common Functions in Computer Science</h2>
+      <div className="members outline p-5 m-4 rounded">
+        <p className="text-sm underline">
+          Modulo Function:
+        </p>
+        <p className="text-sm font-thin">
+          <InlineMath math={'M \\% N'} />
+        </p>
+        <p className="text-sm font-thin">
+          Can also be described as the "remainder function". M divided by N, equals the remainder. 
+        </p>
+        <p className="text-sm mt-4 underline">
+          Factorial Function:
+        </p>
+        <p className="text-sm font-thin">
+          <InlineMath math={'n !'}/>
+        </p>
+        <p className="text-sm font-thin">
+          <InlineMath math={'1 * 2 * 3 * 4 * 5 .... n'}/>
+        </p>
+        <p className="text-sm font-thin">
+          Very important when dealing with "complexity", as values explode as they get closer to <InlineMath math={"n"}/>
+        </p>
+        <p className="text-sm mt-4 underline">
+          Floor Function:
+        </p>
+        <p className="text-sm font-thin">
+          <InlineMath math={'f(x) = [ x ]'}/>
+        </p>
+        <p className="text-sm font-thin">
+          <BlockMath math={'x = 3.00001'}/>
+          <BlockMath math={'[x] = 3'}/>
+          or
+          <BlockMath math={'x = -5.9834'}/>
+          <BlockMath math={'[x] = -6'}/>
+          Descibes the "floor" of the integer, or rounds to the lowest integer. The counterpart to this function is the "ceiling function", which is the inverse.
+        </p>
+        <p className="text-sm mt-4 underline">
+          Exponential Function:
+        </p>
+        <p className="text-sm font-thin">
+          <InlineMath math={'f(x) = 2^x'}/>
+        </p>
+        <p className="text-sm font-thin">
+          Input variable x occurs as an exponent
+        </p>
+        <p className="text-sm mt-4 underline">
+          Logarithm Function:
+        </p>
+        <p className="text-sm font-thin">
+          <InlineMath math={'\\log_a(x) = ?'} />
+        </p>
+        <p className="text-sm font-thin m-1">
+          <InlineMath math={'a^? = x'} />
+        </p>
+        <p className="text-sm font-thin m-4">
+          "a" raised to what equals "x". There are many different logarithm bases. 
+        </p>
+        <p>
+          Binary logarithm: <InlineMath math={'log_z(x) \\Rightarrow \\lg(x)'}/>
+        </p>
+        <p>
+          Decimal logarithm: <InlineMath math={'\\log_{10}(x) \\Rightarrow \\log(x)'} />
+        </p>
+        <p>
+          Natural logarithm: <InlineMath math={'log_e(x) \\Rightarrow \\ln(x)'}/>
+        </p>
+        
+      </div>
 
     </div>
   );

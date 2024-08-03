@@ -25,25 +25,31 @@ export default function DiscreteMath() {
           </div>
           <div className="border-l-2 border-white h-8"></div>
           <div className="flex flex-col items-center border-2 border-gray-400 rounded p-4 cursor-pointer hover:bg-gray-700">
-            <Link href="/graph-theory" passHref>
+            <Link href="discrete-math/graph-theory" passHref>
               <p className="text-xl mb-2">Graph Theory</p>
             </Link>
           </div>
           <div className="border-l-2 border-white h-8"></div>
           <div className="flex flex-col items-center border-2 border-gray-400 rounded p-4 cursor-pointer hover:bg-gray-700">
-            <Link href="/combinatorics" passHref>
+            <Link href="discrete-math/combinatorics" passHref>
               <p className="text-xl mb-2">Combinatorics</p>
             </Link>
           </div>
           <div className="border-l-2 border-white h-8"></div>
           <div className="flex flex-col items-center border-2 border-gray-400 rounded p-4 cursor-pointer hover:bg-gray-700">
-            <Link href="/logic" passHref>
+            <Link href="discrete-math/algorithm-theory" passHref>
+              <p className="text-xl mb-2">Algorithm Theory</p>
+            </Link>
+          </div>
+          <div className="border-l-2 border-white h-8"></div>
+          <div className="flex flex-col items-center border-2 border-gray-400 rounded p-4 cursor-pointer hover:bg-gray-700">
+            <Link href="discrete-math/logic" passHref>
               <p className="text-xl mb-2">Logic</p>
             </Link>
           </div>
           <div className="border-l-2 border-white h-8"></div>
           <div className="flex flex-col items-center border-2 border-gray-400 rounded p-4 cursor-pointer hover:bg-gray-700">
-            <Link href="/number-theory" passHref>
+            <Link href="discrete-math/number-theory" passHref>
               <p className="text-xl mb-2">Number Theory</p>
             </Link>
           </div>
