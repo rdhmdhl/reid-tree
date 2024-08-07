@@ -8,6 +8,7 @@ import MultiGraph from './components/MultiGraph';
 import Pseudograph from './components/PseudoGraph';
 import MixedGraph from './components/MixedGraph';
 import Tree from './components/Tree';
+import BinaryTree from './components/BinaryTree';
 
 function GraphTheory() {
   return (
@@ -78,7 +79,37 @@ function GraphTheory() {
         A tree is a connected graph that contains no cycles. A cycle is a path of edges and verticies wherein a vertex is reachable from itself. Each node (except the root) has exactly one parent, and there is exactly one path between any two nodes. Trees are used in various applications like representing hierarchical data, organizing information, and more. For example, a family tree represents relationships between family members across generations.
       </p>
       <Tree/>
+      <p className='mt-4'>
+        Binary Tree:
+      </p>
+      <p>
+        A binary tree is a type of tree data structure in which each node has at most two children, referred to as the left child and the right child. Binary trees are used in various applications, such as expression parsing, searching algorithms (like binary search trees), and data organization. They are particularly efficient for operations like insertion, deletion, and lookup. In a binary tree, each node can have either zero, one, or two children, making the structure flexible and suitable for different computational tasks.
+      </p>
+      <BinaryTree/>
     </div>
+
+    <h2 className="text-2xl mt-4">Methods for Searching a Tree</h2>
+    <div className="members outline p-5 m-4 rounded">
+      <p className='italic mt-4' >
+        Preorder traversal:
+      </p>
+      <p>
+        Visit root, visit subtrees left to right. Do not visit a node/vertex twice. 
+      </p>
+      <p className='italic mt-4'>
+        In Order traversal:
+      </p>
+      <p>
+        Visit leftmost subtree, visit root, then visit remaining subtrees left to right. 
+      </p>
+      <p className='italic mt-4'>
+        Postorder traversal
+      </p>
+      <p>
+        Visit subtrees left to right, visit root. 
+      </p>
+    </div>
+
 
   </div>
   )

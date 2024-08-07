@@ -99,6 +99,7 @@ function functions() {
         <p className="text-sm font-thin mt-4">This can be simplified further by using the matrix format, but not the same sort of matrix found in linear algebra. </p>
         <FunctionMatrix/>
       </div>
+      
       {/* COMMON FUNCTIONS IN COMP SCI */}
       <h2 className="text-2xl mt-4">Common Functions in Computer Science</h2>
       <div className="members outline p-5 m-4 rounded">
@@ -168,6 +169,16 @@ function functions() {
           Natural logarithm: <InlineMath math={'log_e(x) \\Rightarrow \\ln(x)'}/>
         </p>
         
+      </div>
+      {/* Bijection, Injection, And Surjection */}
+      <h2 className="text-2xl mt-4">Bijection, Injection, And Surjection</h2>
+      <div className="members outline p-5 m-4 rounded">
+        <p className="text-sm mt-4">
+          Functions can be injections (one-to-one functions), surjections (onto functions) or bijections (both one-to-one and onto). Informally, an injection has each output mapped to by at most one input, a surjection includes the entire possible range in the output, and a bijection has both conditions be true.
+        </p>
+        <p className="text-sm mt-4">
+          This concept allows for comparisons between cardinalities of sets, in proofs comparing the sizes of both finite and infinite sets.
+        </p>
       </div>
 
     </div>
