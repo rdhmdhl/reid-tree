@@ -14,7 +14,7 @@ function Combinatorics() {
           What is it?
         </p>
         <p className="text-sm font-thin mt-4">
-          Brilliant.org describes combinatorics well. They call it, the mathematics of counting and arranging. It applies mathematicsal operations to count quantiites that are much too large to be counted the conventional way. 
+          Brilliant.org describes combinatorics well. They call it, the mathematics of counting and arranging. It applies mathematical operations to count quantities that are much too large to be counted the conventional way. 
           </p>
         <p className="text-sm font-thin mt-4">
           This is useful in computer science, as it can be used to develop estimates about how many operations a computer algorithm will require. 
@@ -88,9 +88,6 @@ function Combinatorics() {
         Binomial Theorem
       </h2>
       <div className="members outline p-5 m-4 rounded">
-        <p className="text-sm font-thin mt-4">
-          The binomial theorem shows how to expand expressions like <InlineMath math={'(a + b)^n'}/>
-        </p>
         <PascalTriangle/>
         <p className='mt-4'>
           This is called Pascal's Triangle. It's named after the 17th century French mathematician, Blaise Pascal (1623 - 1662). This triangle visualizes many properties of the binomial coefficient and the binomial theorem. Furthermore, its recursive nature and patterns are frequently found in dynamic programming, data structures, and even in optimization problems where understanding combinations and subsets is crucial.
