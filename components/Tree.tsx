@@ -67,9 +67,9 @@ const ForceGraph = forwardRef<any, ForceGraphProps>(({ data, onNodeClick }) => {
           nodeLabel="name"
           d3VelocityDecay={0.9}
           cooldownTicks={100}
-          enableNodeDrag
-          enableZoomInteraction
-          enablePanInteraction
+          enableNodeDrag={true}
+          enablePanInteraction={false}
+          enableZoomInteraction={false}
           width={size.w}
           height={size.h}
           linkColor={() => "black"}
