@@ -59,7 +59,7 @@ const ForceGraph = forwardRef<any, ForceGraphProps>(({ data, onNodeClick }) => {
     run();
   }, []);
   return (
-    <div ref={containerRef} className="w-full h-[600px]">
+    <div ref={containerRef} className="w-full h-[300px]">
       <section className="flex flex-col items-center min-h-[900px]">
         <ForceGraph2D
           graphData={data}
