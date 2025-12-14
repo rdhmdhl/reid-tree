@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, forwardRef } from "react";
+import React, { useEffect, useState, useRef, forwardRef } from "react";
 import dynamic from "next/dynamic";
 import { NodeObject } from "react-force-graph-2d";
 
@@ -35,43 +35,52 @@ interface ForceGraphProps {
 
 /* ---------------- Component ---------------- */
 
-const ForceGraph = forwardRef<any, ForceGraphProps>(
-  (
-    { data, width = 600, height = 600, zoomToFitDelayMs = 500, onNodeClick },
-    ref,
-  ) => {
-    const graphRef = useRef<any>(null);
+const ForceGraph = forwardRef<any, ForceGraphProps>(({ data, onNodeClick }) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const graphRef = useRef<any>(null);
+  const [size, setSize] = useState({ w: 600, h: 600 });
 
-    useEffect(() => {
-      if (!graphRef.current) return;
+  useEffect(() => {
+    if (!containerRef.current) return;
+    const { width, height } = containerRef.current.getBoundingClientRect();
+    setSize({ w: width, h: height });
+  }, []);
 
-      const timeout = setTimeout(() => {
-        graphRef.current.zoomToFit(400);
-      }, zoomToFitDelayMs);
+  useEffect(() => {
+    if (!graphRef.current) return;
 
-      return () => clearTimeout(timeout);
-    }, [zoomToFitDelayMs]);
+    const run = async () => {
+      if (document.fonts?.ready) {
+        await document.fonts.ready;
+      }
+      graphRef.current?.zoomToFit(400);
+    };
 
-    return (
-      <ForceGraph2D
-        graphData={data}
-        nodeAutoColorBy="id"
-        nodeLabel="name"
-        d3VelocityDecay={0.9}
-        cooldownTicks={100}
-        enableNodeDrag
-        enableZoomInteraction
-        enablePanInteraction
-        width={width}
-        height={height}
-        linkColor={() => "black"}
-        linkDirectionalArrowLength={3.5}
-        linkDirectionalArrowRelPos={1}
-        onNodeClick={onNodeClick}
-      />
-    );
-  },
-);
+    run();
+  }, []);
+  return (
+    <div ref={containerRef} className="w-full h-[600px]">
+      <section className="flex flex-col items-center min-h-[900px]">
+        <ForceGraph2D
+          graphData={data}
+          nodeAutoColorBy="id"
+          nodeLabel="name"
+          d3VelocityDecay={0.9}
+          cooldownTicks={100}
+          enableNodeDrag
+          enableZoomInteraction
+          enablePanInteraction
+          width={size.w}
+          height={size.h}
+          linkColor={() => "black"}
+          linkDirectionalArrowLength={3.5}
+          linkDirectionalArrowRelPos={1}
+          onNodeClick={onNodeClick}
+        />
+      </section>
+    </div>
+  );
+});
 
 ForceGraph.displayName = "ForceGraph";
 
