@@ -1,9 +1,11 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef, MutableRefObject, forwardRef } from 'react';
-import dynamic from 'next/dynamic';
+import React, { useEffect, useRef, MutableRefObject, forwardRef } from "react";
+import dynamic from "next/dynamic";
 
-const ForceGraph2D = dynamic(() => import('react-force-graph-2d'), { ssr: false });
+const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
+  ssr: false,
+});
 
 interface Node {
   id: string;
@@ -25,6 +27,7 @@ const ForwardedForceGraph2D = forwardRef<any, any>((props, ref) => (
   <ForceGraph2D {...props} forwardRef={ref} />
 ));
 
+ForwardedForceGraph2D.displayName = "ForwardedForceGraph2D";
 const Pseudograph: React.FC = () => {
   const graphRef: MutableRefObject<any> = useRef();
   useEffect(() => {
@@ -39,22 +42,22 @@ const Pseudograph: React.FC = () => {
 
   const data: GraphData = {
     nodes: [
-        { id: 'A', name: 'Alice' },
-        { id: 'B', name: 'Bob' },
-        { id: 'C', name: 'Charlie' },
-        { id: 'D', name: 'David' },
-        { id: 'E', name: 'Eve' }
-      ],
+      { id: "A", name: "Alice" },
+      { id: "B", name: "Bob" },
+      { id: "C", name: "Charlie" },
+      { id: "D", name: "David" },
+      { id: "E", name: "Eve" },
+    ],
     links: [
-        { source: 'A', target: 'B', curvature: 0.2 },
-        { source: 'A', target: 'B', curvature: -0.2 }, // Multiple edges between Alice and Bob
-        { source: 'A', target: 'A', curvature: 0.3 }, // Loop at Alice
-        { source: 'B', target: 'D', curvature: 0.2 },
-        { source: 'C', target: 'D', curvature: -0.2 }, // Multiple edges between Charlie and David
-        { source: 'C', target: 'D' },
-        { source: 'D', target: 'E' },
-        { source: 'E', target: 'E', curvature: 0.3 }  // Loop at Eve
-      ]
+      { source: "A", target: "B", curvature: 0.2 },
+      { source: "A", target: "B", curvature: -0.2 }, // Multiple edges between Alice and Bob
+      { source: "A", target: "A", curvature: 0.3 }, // Loop at Alice
+      { source: "B", target: "D", curvature: 0.2 },
+      { source: "C", target: "D", curvature: -0.2 }, // Multiple edges between Charlie and David
+      { source: "C", target: "D" },
+      { source: "D", target: "E" },
+      { source: "E", target: "E", curvature: 0.3 }, // Loop at Eve
+    ],
   };
 
   return (
@@ -72,7 +75,7 @@ const Pseudograph: React.FC = () => {
           enablePanInteraction={false} // Disable panning
           width={300} // Set width to 90% of window width
           height={300} // Set fixed height
-          linkColor={() => 'white'} // Set edge color to white
+          linkColor={() => "white"} // Set edge color to white
           linkDirectionalArrowLength={3.5}
           linkDirectionalArrowRelPos={1}
           linkCurvature="curvature" // Apply curvature to differentiate multiple edges

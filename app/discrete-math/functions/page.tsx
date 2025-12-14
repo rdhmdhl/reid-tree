@@ -25,14 +25,9 @@ function functions() {
           formula to compute the output for any input (although this is
           certainly not the only way to describe the rule).{" "}
         </p>
-        <p className="text-sm font-thin">
-          For example, consider the function: 
-        </p>
-          <BlockMath math={"f: N \\to N"} />{" "}
-        <p>
-            defined by 
-        </p>
-          <BlockMath math={"f(x) = x^2 + 3"} />
+        <p className="text-sm font-thin">For example, consider the function:</p>
+        <BlockMath math={"f: N \\to N"} /> <p>defined by</p>
+        <BlockMath math={"f(x) = x^2 + 3"} />
         <p>
           Here the domain and codomain are the same set (the natural numbers).
           The rule is: take your input, multiply it by itself and add 3. This
@@ -42,8 +37,7 @@ function functions() {
           is actually an output (there is no way to get 0, 1, 2, 5, etc.). The
           set of natural numbers that are outputs is called the range of the
           function (in this case, the range is{" "}
-          <span>{"{3, 4, 7, 12, 19, 28, ...}"}</span>
-          , all the natural numbers
+          <span>{"{3, 4, 7, 12, 19, 28, ...}"}</span>, all the natural numbers
           that are 3 more than a perfect square).
         </p>
         <p className="text-sm font-thin mt-4">
@@ -81,106 +75,113 @@ function functions() {
         </div>
         <FunctionGraph />
         <p className="text-sm font-thin mt-4">
-            It would be absolutely WRONG to connect the dots or try to fit them to some curve. There are only three elements in the domain. A curve would mean that the domain contains an entire interval of real numbers.
+          It would be absolutely WRONG to connect the dots or try to fit them to
+          some curve. There are only three elements in the domain. A curve would
+          mean that the domain contains an entire interval of real numbers.
         </p>
         <p className="text-sm font-thin mt-4">
-            Here is another way to represent that same function:
+          Here is another way to represent that same function:
         </p>
         <div className="text-sm font-thin flex justify-center ">
-            <FunctionDiagram/>
+          <FunctionDiagram />
         </div>
         <p className="text-sm font-thin mt-4">
-            This shows that the function <InlineMath math={'f'}/> sends 1 to 2, 2 to 1 and 3 to 3: just follow the arrows.
+          This shows that the function <InlineMath math={"f"} /> sends 1 to 2, 2
+          to 1 and 3 to 3: just follow the arrows.
         </p>
         <p className="text-sm font-thin mt-4">
-            Here's what this function would look like in the table format:
+          Here&apos;s what this function would look like in the table format:
         </p>
-        <FunctionTable/>
-        <p className="text-sm font-thin mt-4">This can be simplified further by using the matrix format, but not the same sort of matrix found in linear algebra. </p>
-        <FunctionMatrix/>
+        <FunctionTable />
+        <p className="text-sm font-thin mt-4">
+          This can be simplified further by using the matrix format, but not the
+          same sort of matrix found in linear algebra.{" "}
+        </p>
+        <FunctionMatrix />
       </div>
-      
+
       {/* COMMON FUNCTIONS IN COMP SCI */}
       <h2 className="text-2xl mt-4">Common Functions in Computer Science</h2>
       <div className="members outline p-5 m-4 rounded">
-        <p className="text-sm underline">
-          Modulo Function:
+        <p className="text-sm underline">Modulo Function:</p>
+        <p className="text-sm font-thin">
+          <InlineMath math={"M \\% N"} />
         </p>
         <p className="text-sm font-thin">
-          <InlineMath math={'M \\% N'} />
+          Can also be described as the &quot;remainder function&quot;. M divided
+          by N, equals the remainder.
+        </p>
+        <p className="text-sm mt-4 underline">Factorial Function:</p>
+        <p className="text-sm font-thin">
+          <InlineMath math={"n !"} />
         </p>
         <p className="text-sm font-thin">
-          Can also be described as the "remainder function". M divided by N, equals the remainder. 
-        </p>
-        <p className="text-sm mt-4 underline">
-          Factorial Function:
+          <InlineMath math={"1 * 2 * 3 * 4 * 5 .... n"} />
         </p>
         <p className="text-sm font-thin">
-          <InlineMath math={'n !'}/>
+          Very important when dealing with &quot;complexity&quot;, as values
+          explode as they get closer to <InlineMath math={"n"} />
+        </p>
+        <p className="text-sm mt-4 underline">Floor Function:</p>
+        <p className="text-sm font-thin">
+          <InlineMath math={"f(x) = [ x ]"} />
         </p>
         <p className="text-sm font-thin">
-          <InlineMath math={'1 * 2 * 3 * 4 * 5 .... n'}/>
-        </p>
-        <p className="text-sm font-thin">
-          Very important when dealing with "complexity", as values explode as they get closer to <InlineMath math={"n"}/>
-        </p>
-        <p className="text-sm mt-4 underline">
-          Floor Function:
-        </p>
-        <p className="text-sm font-thin">
-          <InlineMath math={'f(x) = [ x ]'}/>
-        </p>
-        <p className="text-sm font-thin">
-          <BlockMath math={'x = 3.00001'}/>
-          <BlockMath math={'[x] = 3'}/>
+          <BlockMath math={"x = 3.00001"} />
+          <BlockMath math={"[x] = 3"} />
           or
-          <BlockMath math={'x = -5.9834'}/>
-          <BlockMath math={'[x] = -6'}/>
-          Descibes the "floor" of the integer, or rounds to the lowest integer. The counterpart to this function is the "ceiling function", which is the inverse.
+          <BlockMath math={"x = -5.9834"} />
+          <BlockMath math={"[x] = -6"} />
+          Descibes the &quot;floor&quot; of the integer, or rounds to the lowest
+          integer. The counterpart to this function is the &quot;ceiling
+          function&quot;, which is the inverse.
         </p>
-        <p className="text-sm mt-4 underline">
-          Exponential Function:
-        </p>
+        <p className="text-sm mt-4 underline">Exponential Function:</p>
         <p className="text-sm font-thin">
-          <InlineMath math={'f(x) = 2^x'}/>
+          <InlineMath math={"f(x) = 2^x"} />
         </p>
         <p className="text-sm font-thin">
           Input variable x occurs as an exponent
         </p>
-        <p className="text-sm mt-4 underline">
-          Logarithm Function:
-        </p>
+        <p className="text-sm mt-4 underline">Logarithm Function:</p>
         <p className="text-sm font-thin">
-          <InlineMath math={'\\log_a(x) = ?'} />
+          <InlineMath math={"\\log_a(x) = ?"} />
         </p>
         <p className="text-sm font-thin m-1">
-          <InlineMath math={'a^? = x'} />
+          <InlineMath math={"a^? = x"} />
         </p>
         <p className="text-sm font-thin m-4">
-          "a" raised to what equals "x". There are many different logarithm bases. 
+          &quot;a&quot; raised to what equals &quot;x&quot;. There are many
+          different logarithm bases.
         </p>
         <p>
-          Binary logarithm: <InlineMath math={'log_z(x) \\Rightarrow \\lg(x)'}/>
+          Binary logarithm:{" "}
+          <InlineMath math={"log_z(x) \\Rightarrow \\lg(x)"} />
         </p>
         <p>
-          Decimal logarithm: <InlineMath math={'\\log_{10}(x) \\Rightarrow \\log(x)'} />
+          Decimal logarithm:{" "}
+          <InlineMath math={"\\log_{10}(x) \\Rightarrow \\log(x)"} />
         </p>
         <p>
-          Natural logarithm: <InlineMath math={'log_e(x) \\Rightarrow \\ln(x)'}/>
+          Natural logarithm:{" "}
+          <InlineMath math={"log_e(x) \\Rightarrow \\ln(x)"} />
         </p>
-        
       </div>
       {/* Bijection, Injection, And Surjection */}
       <h2 className="text-2xl mt-4">Bijection, Injection, And Surjection</h2>
       <div className="members outline p-5 m-4 rounded">
         <p className="text-sm mt-4">
-          Functions can be injections (one-to-one functions), surjections (onto functions) or bijections (both one-to-one and onto). Informally, an injection has each output mapped to by at most one input, a surjection includes the entire possible range in the output, and a bijection has both conditions be true.
+          Functions can be injections (one-to-one functions), surjections (onto
+          functions) or bijections (both one-to-one and onto). Informally, an
+          injection has each output mapped to by at most one input, a surjection
+          includes the entire possible range in the output, and a bijection has
+          both conditions be true.
         </p>
         <p className="text-sm mt-4">
-          This concept allows for comparisons between cardinalities of sets, in proofs comparing the sizes of both finite and infinite sets.
+          This concept allows for comparisons between cardinalities of sets, in
+          proofs comparing the sizes of both finite and infinite sets.
         </p>
       </div>
-
     </div>
   );
 }

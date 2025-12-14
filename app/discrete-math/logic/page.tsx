@@ -26,7 +26,9 @@ const ProofExplanation: React.FC = () => {
         </p>
         <p className="mt-4">When writing proofs, an important symbol is:</p>
         <InlineMath math={"\\implies"} />
-        <p className="mt-4">This means "implies". An implication.</p>
+        <p className="mt-4">
+          This means &quote;implies&quote;. An implication.
+        </p>
         <p className="mt-4">
           The direction of the arrow in <InlineMath math={"p \\implies q"} />{" "}
           indicates that if proposition <InlineMath math={"p"} /> is true, then
@@ -54,8 +56,9 @@ const ProofExplanation: React.FC = () => {
           <InlineMath math={"q"} />. Since the situation where{" "}
           <InlineMath math={"p"} /> is true never happens, it doesn’t matter
           what happens with <InlineMath math={"q"} />. Therefore, the
-          implication is considered true in these cases because you can't accuse
-          the statement of being wrong—- it never had to fulfill its condition.
+          implication is considered true in these cases because you can&apos;t
+          accuse the statement of being wrong—- it never had to fulfill its
+          condition.
         </p>
         <p className="mt-4">
           <strong>Why This is Useful in Logic</strong>
@@ -79,12 +82,13 @@ const ProofExplanation: React.FC = () => {
         </ul>
         <p className="mt-4">
           Another important symbol in logic is the double arrow{" "}
-          <InlineMath math={`\\iff`} />, which stands for "if and only if"
-          (iff). The statement <InlineMath math={"p \\iff q"} /> means that both{" "}
-          <InlineMath math={"p"} /> and <InlineMath math={"q"} /> have the same
-          truth value. In other words, <InlineMath math={"p"} /> implies{" "}
-          <InlineMath math={"q"} />, and <InlineMath math={"q"} /> also implies{" "}
-          <InlineMath math={"p"} />. This is known as logical equivalence.
+          <InlineMath math={`\\iff`} />, which stands for &quote;if and only
+          if&quote; (iff). The statement <InlineMath math={"p \\iff q"} /> means
+          that both <InlineMath math={"p"} /> and <InlineMath math={"q"} /> have
+          the same truth value. In other words, <InlineMath math={"p"} />{" "}
+          implies <InlineMath math={"q"} />, and <InlineMath math={"q"} /> also
+          implies <InlineMath math={"p"} />. This is known as logical
+          equivalence.
         </p>
         <p className="mt-4">
           <InlineMath math={"p \\iff q"} /> is true if both{" "}
@@ -95,13 +99,13 @@ const ProofExplanation: React.FC = () => {
 
         {/* AXIOMS */}
         <p className="mt-16 mb-4">
-        <p className="mt-4 italic">
-            An axiom is a proposition that is assumed to be true without proof. 
-            </p>
+          <p className="mt-4 italic">
+            An axiom is a proposition that is assumed to be true without proof.
+          </p>
           <p className="mt-4">
-              It
-              serves as a fundamental starting point in mathematics and logic, from
-              which other truths are derived through logical reasoning and proofs.
+            It serves as a fundamental starting point in mathematics and logic,
+            from which other truths are derived through logical reasoning and
+            proofs.
           </p>
         </p>
         <p>
@@ -131,7 +135,7 @@ const ProofExplanation: React.FC = () => {
         </p>
 
         <p className="mt-4">
-          However, according to Gödel's Incompleteness Theorems, in any
+          However, according to Gödel&apos;s Incompleteness Theorems, in any
           sufficiently complex system (such as arithmetic), it is impossible for
           a set of axioms to be both complete and consistent if the system is
           capable of expressing the basic truths of arithmetic. This means that

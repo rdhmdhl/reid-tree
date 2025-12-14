@@ -8,10 +8,10 @@ export default function DiscreteMath() {
       <h2 className="text-2xl">Discrete Math</h2>
       <p className="text-l m-5">What is Discrete Mathematics?</p>
       <p className="text-sm font-thin text-left">
-        It's hard to explain. The counterpart to discrete math is continuous
-        math, which can have a range of outcomes or results, whereas discrete
-        math has distinct and separate values. Values in discreate math are
-        countable and often integers. Continous math values are often real
+        It&apos;s hard to explain. The counterpart to discrete math is
+        continuous math, which can have a range of outcomes or results, whereas
+        discrete math has distinct and separate values. Values in discreate math
+        are countable and often integers. Continous math values are often real
         numbers, which can have an infinite amount of values within any
         interval.
       </p>

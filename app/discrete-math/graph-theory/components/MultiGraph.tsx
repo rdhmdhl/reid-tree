@@ -1,9 +1,17 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef, useState, MutableRefObject, forwardRef } from 'react';
-import dynamic from 'next/dynamic';
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  MutableRefObject,
+  forwardRef,
+} from "react";
+import dynamic from "next/dynamic";
 
-const ForceGraph2D = dynamic(() => import('react-force-graph-2d'), { ssr: false });
+const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
+  ssr: false,
+});
 
 interface Node {
   id: string;
@@ -25,6 +33,7 @@ const ForwardedForceGraph2D = forwardRef<any, any>((props, ref) => (
   <ForceGraph2D {...props} forwardRef={ref} />
 ));
 
+ForwardedForceGraph2D.displayName = "ForwardedForceGraph2D";
 const MultiGraph: React.FC = () => {
   const graphRef: MutableRefObject<any> = useRef();
 
@@ -40,21 +49,21 @@ const MultiGraph: React.FC = () => {
 
   const data: GraphData = {
     nodes: [
-        { id: 'A', name: 'New York' },
-        { id: 'B', name: 'Los Angeles' },
-        { id: 'C', name: 'Chicago' },
-        { id: 'D', name: 'Houston' },
-        { id: 'E', name: 'Miami' }
+      { id: "A", name: "New York" },
+      { id: "B", name: "Los Angeles" },
+      { id: "C", name: "Chicago" },
+      { id: "D", name: "Houston" },
+      { id: "E", name: "Miami" },
     ],
     links: [
-        { source: 'A', target: 'B', curvature: 0.2 },
-        { source: 'A', target: 'B', curvature: -0.2 }, // Offset multiple edges with curvature
-        { source: 'A', target: 'C' },
-        { source: 'B', target: 'D', curvature: 0.2 },
-        { source: 'C', target: 'D', curvature: -0.2 }, // Offset multiple edges with curvature
-        { source: 'C', target: 'D' },
-        { source: 'D', target: 'E' }
-      ]
+      { source: "A", target: "B", curvature: 0.2 },
+      { source: "A", target: "B", curvature: -0.2 }, // Offset multiple edges with curvature
+      { source: "A", target: "C" },
+      { source: "B", target: "D", curvature: 0.2 },
+      { source: "C", target: "D", curvature: -0.2 }, // Offset multiple edges with curvature
+      { source: "C", target: "D" },
+      { source: "D", target: "E" },
+    ],
   };
 
   return (
@@ -72,7 +81,7 @@ const MultiGraph: React.FC = () => {
           enablePanInteraction={false} // Disable panning
           width={300} // Set width to 90% of window width
           height={300} // Set fixed height
-          linkColor={() => 'white'} // Set edge color to white
+          linkColor={() => "white"} // Set edge color to white
           linkDirectionalArrowLength={3.5}
           linkDirectionalArrowRelPos={1}
           linkCurvature="curvature" // Apply curvature to differentiate multiple edges
@@ -81,4 +90,5 @@ const MultiGraph: React.FC = () => {
     </div>
   );
 };
-export default MultiGraph
+export default MultiGraph;
+

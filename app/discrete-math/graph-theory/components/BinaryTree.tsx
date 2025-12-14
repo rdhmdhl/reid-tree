@@ -1,9 +1,11 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef, MutableRefObject, forwardRef } from 'react';
-import dynamic from 'next/dynamic';
+import React, { useEffect, useRef, MutableRefObject, forwardRef } from "react";
+import dynamic from "next/dynamic";
 
-const ForceGraph2D = dynamic(() => import('react-force-graph-2d'), { ssr: false });
+const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
+  ssr: false,
+});
 
 interface Node {
   id: string;
@@ -24,6 +26,7 @@ const ForwardedForceGraph2D = forwardRef<any, any>((props, ref) => (
   <ForceGraph2D {...props} forwardRef={ref} />
 ));
 
+ForwardedForceGraph2D.displayName = "ForwardedForceGraph2D";
 const BinaryTree: React.FC = () => {
   const graphRef: MutableRefObject<any> = useRef();
 
@@ -39,22 +42,22 @@ const BinaryTree: React.FC = () => {
 
   const data: GraphData = {
     nodes: [
-      { id: 'A', name: 'Root' },
-      { id: 'B', name: 'Left Child' },
-      { id: 'C', name: 'Right Child' },
-      { id: 'D', name: 'Left Grandchild 1' },
-      { id: 'E', name: 'Left Grandchild 2' },
-      { id: 'F', name: 'Right Grandchild 1' },
-      { id: 'G', name: 'Right Grandchild 2' }
+      { id: "A", name: "Root" },
+      { id: "B", name: "Left Child" },
+      { id: "C", name: "Right Child" },
+      { id: "D", name: "Left Grandchild 1" },
+      { id: "E", name: "Left Grandchild 2" },
+      { id: "F", name: "Right Grandchild 1" },
+      { id: "G", name: "Right Grandchild 2" },
     ],
     links: [
-      { source: 'A', target: 'B' },
-      { source: 'A', target: 'C' },
-      { source: 'B', target: 'D' },
-      { source: 'B', target: 'E' },
-      { source: 'C', target: 'F' },
-      { source: 'C', target: 'G' }
-    ]
+      { source: "A", target: "B" },
+      { source: "A", target: "C" },
+      { source: "B", target: "D" },
+      { source: "B", target: "E" },
+      { source: "C", target: "F" },
+      { source: "C", target: "G" },
+    ],
   };
 
   return (
@@ -72,7 +75,7 @@ const BinaryTree: React.FC = () => {
           enablePanInteraction={false} // Disable panning
           width={300} // Set width to 300
           height={300} // Set height to 300
-          linkColor={() => 'white'} // Set edge color to white
+          linkColor={() => "white"} // Set edge color to white
           linkDirectionalArrowLength={3.5}
           linkDirectionalArrowRelPos={1}
         />

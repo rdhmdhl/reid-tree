@@ -1,10 +1,17 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef, useState, MutableRefObject, forwardRef } from 'react';
-import dynamic from 'next/dynamic';
+import React, {
+  useEffect,
+  useRef,
+  useState,
+  MutableRefObject,
+  forwardRef,
+} from "react";
+import dynamic from "next/dynamic";
 
-
-const ForceGraph2D = dynamic(() => import('react-force-graph-2d'), { ssr: false });
+const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
+  ssr: false,
+});
 
 interface Node {
   id: string;
@@ -25,6 +32,8 @@ const ForwardedForceGraph2D = forwardRef<any, any>((props, ref) => (
   <ForceGraph2D {...props} forwardRef={ref} />
 ));
 
+ForwardedForceGraph2D.displayName = "ForwardedForceGraph2D";
+
 const SimpleGraph: React.FC = () => {
   const graphRef: MutableRefObject<any> = useRef();
 
@@ -40,19 +49,19 @@ const SimpleGraph: React.FC = () => {
 
   const data: GraphData = {
     nodes: [
-        { id: 'A', name: 'Alice' },
-        { id: 'B', name: 'Bob' },
-        { id: 'C', name: 'Charlie' },
-        { id: 'D', name: 'David' },
-        { id: 'E', name: 'Eve' }
-      ],
+      { id: "A", name: "Alice" },
+      { id: "B", name: "Bob" },
+      { id: "C", name: "Charlie" },
+      { id: "D", name: "David" },
+      { id: "E", name: "Eve" },
+    ],
     links: [
-      { source: 'A', target: 'B' },
-      { source: 'A', target: 'C' },
-      { source: 'B', target: 'D' },
-      { source: 'C', target: 'D' },
-      { source: 'D', target: 'E' }
-    ]
+      { source: "A", target: "B" },
+      { source: "A", target: "C" },
+      { source: "B", target: "D" },
+      { source: "C", target: "D" },
+      { source: "D", target: "E" },
+    ],
   };
 
   return (
@@ -70,7 +79,7 @@ const SimpleGraph: React.FC = () => {
           enablePanInteraction={false} // Disable zooming and panning
           width={300}
           height={300}
-          linkColor={() => 'white'} // Set edge color to white
+          linkColor={() => "white"} // Set edge color to white
         />
       </div>
     </div>

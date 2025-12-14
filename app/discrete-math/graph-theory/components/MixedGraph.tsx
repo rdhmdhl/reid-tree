@@ -1,9 +1,11 @@
-'use client';
+"use client";
 
-import React, { useEffect, useRef, MutableRefObject, forwardRef } from 'react';
-import dynamic from 'next/dynamic';
+import React, { useEffect, useRef, MutableRefObject, forwardRef } from "react";
+import dynamic from "next/dynamic";
 
-const ForceGraph2D = dynamic(() => import('react-force-graph-2d'), { ssr: false });
+const ForceGraph2D = dynamic(() => import("react-force-graph-2d"), {
+  ssr: false,
+});
 
 interface Node {
   id: string;
@@ -25,6 +27,7 @@ const ForwardedForceGraph2D = forwardRef<any, any>((props, ref) => (
   <ForceGraph2D {...props} forwardRef={ref} />
 ));
 
+ForwardedForceGraph2D.displayName = "ForwardedForceGraph2D";
 const MixedGraph: React.FC = () => {
   const graphRef: MutableRefObject<any> = useRef();
 
@@ -40,22 +43,22 @@ const MixedGraph: React.FC = () => {
 
   const data: GraphData = {
     nodes: [
-      { id: 'A', name: 'Downtown' },
-      { id: 'B', name: 'Hollywood' },
-      { id: 'C', name: 'Santa Monica' },
-      { id: 'D', name: 'Venice' },
-      { id: 'E', name: 'Beverly Hills' }
+      { id: "A", name: "Downtown" },
+      { id: "B", name: "Hollywood" },
+      { id: "C", name: "Santa Monica" },
+      { id: "D", name: "Venice" },
+      { id: "E", name: "Beverly Hills" },
     ],
     links: [
-      { source: 'A', target: 'B', curvature: 0.2 },
-      { source: 'A', target: 'B', curvature: -0.2 }, // Multiple edges between Downtown and Hollywood
-      { source: 'A', target: 'A', curvature: 0.3 }, // Loop at Downtown
-      { source: 'B', target: 'D', curvature: 0.2 },
-      { source: 'C', target: 'D', curvature: -0.2 }, // Multiple edges between Santa Monica and Venice
-      { source: 'C', target: 'D' },
-      { source: 'D', target: 'E' },
-      { source: 'E', target: 'E', curvature: 0.3 }  // Loop at Beverly Hills
-    ]
+      { source: "A", target: "B", curvature: 0.2 },
+      { source: "A", target: "B", curvature: -0.2 }, // Multiple edges between Downtown and Hollywood
+      { source: "A", target: "A", curvature: 0.3 }, // Loop at Downtown
+      { source: "B", target: "D", curvature: 0.2 },
+      { source: "C", target: "D", curvature: -0.2 }, // Multiple edges between Santa Monica and Venice
+      { source: "C", target: "D" },
+      { source: "D", target: "E" },
+      { source: "E", target: "E", curvature: 0.3 }, // Loop at Beverly Hills
+    ],
   };
 
   return (
@@ -73,7 +76,7 @@ const MixedGraph: React.FC = () => {
           enablePanInteraction={false} // Disable panning
           width={300} // Set width to 300
           height={300} // Set height to 300
-          linkColor={() => 'white'} // Set edge color to white
+          linkColor={() => "white"} // Set edge color to white
           linkDirectionalArrowLength={3.5}
           linkDirectionalArrowRelPos={1}
           linkCurvature="curvature" // Apply curvature to differentiate multiple edges
